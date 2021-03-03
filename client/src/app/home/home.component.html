@@ -1,0 +1,15 @@
+<div class="container mt-5" style="text-align: center;" *ngIf="!registerMode">
+    <p>Welcome to the Dating App, a place where you can meet people. Register to continue</p>
+    <br>
+    <button class="btn btn-primary mr-2" (click)="registerToggle()">Register</button>
+    <button class="btn btn-info">More Info</button>
+</div>
+
+
+<div class="container mt-5" *ngIf="registerMode">
+    <div class=" row justify-content-center">
+        <div class="col-4">
+            <app-register (cancelRegistration) = "cancelRegistration($event)"></app-register>
+        </div>
+    </div>
+</div>
